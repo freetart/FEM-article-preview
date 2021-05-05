@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon/koala.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.min.css" />
     <title>Frontend Mentor Article Preview Component</title>
   </head>
   <body>
     <section class="article-container">
-      <article class="article">
-        <div class="article-img">
+      <article class="article" data-aos="zoom-out-down">
+        <div class="article-img" data-aos="fade-right" data-aos-delay="200">
           <img src="./images/drawers.jpg" alt="article img" />
         </div>
-        <div class="article-info">
+        <div class="article-info" data-aos="fade-down" data-aos-delay="200">
           <h2 class="article-info-title">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
@@ -40,6 +41,10 @@
         </div>
       </article>
     </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 200, duration: 1000, once: true });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
