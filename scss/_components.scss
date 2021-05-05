@@ -1,11 +1,12 @@
+// article card
 .article {
   @include maxWidthSm;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   background-color: color(white);
-  box-shadow: 0.5rem 0.5rem 2rem color(primary);
+  box-shadow: 0.5rem 0.5rem 2rem color(tertiary);
 
-  @media (max-width: 600px) {
+  @include responsive(md) {
     grid-template-columns: 1fr;
 
     &-img {
@@ -23,6 +24,10 @@
   &-info {
     padding: 2rem;
 
+    @include responsive(sm) {
+      padding: 1.5rem;
+    }
+
     &-title {
       @include headingStyles;
       font-size: size(lg);
@@ -39,6 +44,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include responsive(sm) {
+        flex-direction: column;
+      }
 
       &-left {
         display: flex;
@@ -67,13 +76,15 @@
       &-right {
         img {
           width: 3.5rem;
+
+          @include responsive(sm) {
+            width: 2.5rem;
+            padding-top: 2rem;
+          }
         }
       }
     }
   }
 }
 
-// .share-btn img,
-// .article-info-author-left img {
-//   width: 10rem;
-// }
+// pop up
