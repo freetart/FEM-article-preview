@@ -1,4 +1,5 @@
 .article-container {
   @include flexCenter;
   @include sectionSpacing;
+  overflow-x: hidden;
 }

@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 1.5fr;
   background-color: color(white);
   box-shadow: 0.5rem 0.5rem 2rem color(tertiary);
+  overflow: hidden;
 
   @include responsive(md) {
     grid-template-columns: 1fr;
