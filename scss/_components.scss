@@ -74,6 +74,10 @@
       }
 
       &-right {
+        .share-btn {
+          position: relative;
+        }
+
         img {
           width: 3.5rem;
 
@@ -88,3 +92,74 @@
 }
 
 // pop up
+.popup {
+  position: absolute;
+  display: inline-block;
+  margin-right: 2rem;
+
+  .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: color(secondary);
+    color: #fff;
+    border-radius: 6px;
+    padding: 1rem 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    right: -10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    small {
+      @include headingStyles;
+      font-size: size(xxs);
+    }
+
+    img {
+      width: 2rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: color(secondary) transparent transparent transparent;
+    }
+  }
+
+  &.show .popuptext {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+}
+
+// popup animation
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
