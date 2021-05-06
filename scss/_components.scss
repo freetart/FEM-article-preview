@@ -76,6 +76,11 @@
       &-right {
         .share-btn {
           position: relative;
+          padding-right: 5rem;
+
+          @include responsive(sm) {
+            display: none;
+          }
         }
 
         img {
@@ -83,7 +88,7 @@
 
           @include responsive(sm) {
             width: 2.5rem;
-            padding-top: 2rem;
+            // padding-top: 2rem;
           }
         }
       }
@@ -96,6 +101,10 @@
   position: absolute;
   display: inline-block;
   margin-right: 2rem;
+
+  @include responsive(sm) {
+    display: none;
+  }
 
   .popuptext {
     visibility: hidden;
@@ -142,6 +151,26 @@
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+  }
+}
+
+.popuptext-mobile {
+  display: none;
+
+  @include responsive(sm) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-top: 2rem;
+
+    .popuptext-link {
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: color(secondary);
+    }
   }
 }
 
