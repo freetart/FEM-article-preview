@@ -23,6 +23,7 @@ html {
 
 body {
   @include flexCenter;
+  flex-direction: column;
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
   height: 100vh;
